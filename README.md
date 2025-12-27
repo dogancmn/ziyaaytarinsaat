@@ -37,8 +37,9 @@ Bu proje GitHub Pages ile otomatik olarak yayınlanabilir.
 
 ## 📝 Notlar
 
-- Formlar şu anda backend entegrasyonu gerektiriyor
-- Veritabanı entegrasyonu için Firebase veya Supabase kullanılabilir
+- Proje PHP + MySQL ile çalışmaktadır
+- cPanel kurulumu için `CPANEL_KURULUM.md` dosyasına bakın
+- Veritabanı şeması `database.sql` dosyasında bulunur
 
 ## 🔧 Geliştirme
 

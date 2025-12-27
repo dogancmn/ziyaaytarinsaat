@@ -22,3 +22,6 @@ npm-debug.log*
 *.tmp
 *.temp
 
+# Config files with sensitive data
+config.php
+

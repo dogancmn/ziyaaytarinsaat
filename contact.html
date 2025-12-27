@@ -281,31 +281,12 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-    
-    <!-- Firebase Config & Handler -->
-    <script src="firebase-config.js"></script>
-    <script src="js/firebase-handler.js"></script>
-    
     <!-- Contact Form Handler -->
     <script>
         $(document).ready(function() {
-            // Firebase'i başlat
-            if (typeof firebase !== 'undefined' && firebaseConfig.apiKey !== 'YOUR_API_KEY') {
-                firebase.initializeApp(firebaseConfig);
-            }
-            
             // Contact form submit
-            $('#contactForm').on('submit', async function(e) {
+            $('#contactForm').on('submit', function(e) {
                 e.preventDefault();
-                
-                // Firebase yapılandırılmamışsa uyarı göster
-                if (typeof firebase === 'undefined' || firebaseConfig.apiKey === 'YOUR_API_KEY') {
-                    alert('Firebase yapılandırması gerekli. Lütfen firebase-config.js dosyasını doldurun.');
-                    return;
-                }
                 
                 const formData = {
                     name: $('#name').val(),
@@ -325,21 +306,28 @@
                 const originalText = submitBtn.text();
                 submitBtn.prop('disabled', true).text('Gönderiliyor...');
                 
-                try {
-                    const result = await firebaseHandler.submitContactForm(formData);
-                    
-                    if (result.success) {
-                        alert('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.');
-                        $('#contactForm')[0].reset();
-                    } else {
-                        alert('Bir hata oluştu: ' + result.error);
+                // PHP API'ye gönder
+                $.ajax({
+                    url: 'api/contact.php',
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.success) {
+                            alert(response.message);
+                            $('#contactForm')[0].reset();
+                        } else {
+                            alert(response.message || 'Bir hata oluştu. Lütfen tekrar deneyin.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                        alert('Bir hata oluştu. Lütfen tekrar deneyin.');
+                    },
+                    complete: function() {
+                        submitBtn.prop('disabled', false).text(originalText);
                     }
-                } catch (error) {
-                    alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-                    console.error(error);
-                } finally {
-                    submitBtn.prop('disabled', false).text(originalText);
-                }
+                });
             });
         });
     </script>
