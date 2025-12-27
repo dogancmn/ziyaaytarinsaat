@@ -37,26 +37,26 @@
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
         <svg class="position-absolute top-50 start-50 translate-middle" width="60" height="60" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" style="margin-top: -30px; margin-left: -30px;">
-            <!-- Sol yan kanat -->
-            <polygon points="5,45 5,35 8,30 8,40" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-            <polygon points="8,40 8,30 11,25 11,35" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-            <polygon points="11,35 11,25 14,20 14,30" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
+            <!-- Sol yan kanat - 3 trapezoid -->
+            <polygon points="3,48 3,38 6,33 6,43" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+            <polygon points="6,43 6,33 9,28 9,38" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+            <polygon points="9,38 9,28 12,23 12,33" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
             
-            <!-- Sağ yan kanat -->
-            <polygon points="45,45 45,35 42,30 42,40" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-            <polygon points="42,40 42,30 39,25 39,35" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-            <polygon points="39,35 39,25 36,20 36,30" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
+            <!-- Sağ yan kanat - 3 trapezoid -->
+            <polygon points="47,48 47,38 44,33 44,43" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+            <polygon points="44,43 44,33 41,28 41,38" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+            <polygon points="41,38 41,28 38,23 38,33" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
             
-            <!-- Merkezi sütun - üst açık gri -->
-            <polygon points="22,5 28,5 25,15" fill="#E0E0E0" stroke="#CCCCCC" stroke-width="0.5"/>
+            <!-- Merkezi sütun - üst açık gri üçgen -->
+            <polygon points="22,3 28,3 25,12" fill="#E8E8E8" stroke="#CCCCCC" stroke-width="0.3"/>
             
-            <!-- Merkezi sütun - siyah trapezoidler -->
-            <polygon points="20,15 30,15 28,25 22,25" fill="#252525" stroke="#1a1a1a" stroke-width="0.5"/>
-            <polygon points="21,25 29,25 27,32 23,32" fill="#252525" stroke="#1a1a1a" stroke-width="0.5"/>
-            <polygon points="22,32 28,32 26,38 24,38" fill="#252525" stroke="#1a1a1a" stroke-width="0.5"/>
+            <!-- Merkezi sütun - siyah trapezoidler (3 adet) -->
+            <polygon points="20,12 30,12 28,20 22,20" fill="#252525" stroke="#1a1a1a" stroke-width="0.3"/>
+            <polygon points="21,20 29,20 27,28 23,28" fill="#252525" stroke="#1a1a1a" stroke-width="0.3"/>
+            <polygon points="22,28 28,28 26,35 24,35" fill="#252525" stroke="#1a1a1a" stroke-width="0.3"/>
             
-            <!-- Merkezi sütun - alt açık gri -->
-            <polygon points="24,38 26,38 25,45" fill="#E0E0E0" stroke="#CCCCCC" stroke-width="0.5"/>
+            <!-- Merkezi sütun - alt açık gri üçgen -->
+            <polygon points="24,35 26,35 25,42" fill="#E8E8E8" stroke="#CCCCCC" stroke-width="0.3"/>
         </svg>
     </div>
     <!-- Spinner End -->
@@ -93,26 +93,26 @@
         <a href="index.php" class="navbar-brand ms-4 ms-lg-0">
             <h1 class="text-primary m-0 d-flex align-items-center">
                 <svg class="me-3" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Sol yan kanat -->
-                    <polygon points="5,45 5,35 8,30 8,40" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-                    <polygon points="8,40 8,30 11,25 11,35" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-                    <polygon points="11,35 11,25 14,20 14,30" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
+                    <!-- Sol yan kanat - 3 trapezoid -->
+                    <polygon points="3,48 3,38 6,33 6,43" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+                    <polygon points="6,43 6,33 9,28 9,38" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+                    <polygon points="9,38 9,28 12,23 12,33" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
                     
-                    <!-- Sağ yan kanat -->
-                    <polygon points="45,45 45,35 42,30 42,40" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-                    <polygon points="42,40 42,30 39,25 39,35" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
-                    <polygon points="39,35 39,25 36,20 36,30" fill="#113940" stroke="#E0E0E0" stroke-width="0.5"/>
+                    <!-- Sağ yan kanat - 3 trapezoid -->
+                    <polygon points="47,48 47,38 44,33 44,43" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+                    <polygon points="44,43 44,33 41,28 41,38" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
+                    <polygon points="41,38 41,28 38,23 38,33" fill="#113940" stroke="#D0D0D0" stroke-width="0.3"/>
                     
-                    <!-- Merkezi sütun - üst açık gri -->
-                    <polygon points="22,5 28,5 25,15" fill="#E0E0E0" stroke="#CCCCCC" stroke-width="0.5"/>
+                    <!-- Merkezi sütun - üst açık gri üçgen -->
+                    <polygon points="22,3 28,3 25,12" fill="#E8E8E8" stroke="#CCCCCC" stroke-width="0.3"/>
                     
-                    <!-- Merkezi sütun - siyah trapezoidler -->
-                    <polygon points="20,15 30,15 28,25 22,25" fill="#252525" stroke="#1a1a1a" stroke-width="0.5"/>
-                    <polygon points="21,25 29,25 27,32 23,32" fill="#252525" stroke="#1a1a1a" stroke-width="0.5"/>
-                    <polygon points="22,32 28,32 26,38 24,38" fill="#252525" stroke="#1a1a1a" stroke-width="0.5"/>
+                    <!-- Merkezi sütun - siyah trapezoidler (3 adet) -->
+                    <polygon points="20,12 30,12 28,20 22,20" fill="#252525" stroke="#1a1a1a" stroke-width="0.3"/>
+                    <polygon points="21,20 29,20 27,28 23,28" fill="#252525" stroke="#1a1a1a" stroke-width="0.3"/>
+                    <polygon points="22,28 28,28 26,35 24,35" fill="#252525" stroke="#1a1a1a" stroke-width="0.3"/>
                     
-                    <!-- Merkezi sütun - alt açık gri -->
-                    <polygon points="24,38 26,38 25,45" fill="#E0E0E0" stroke="#CCCCCC" stroke-width="0.5"/>
+                    <!-- Merkezi sütun - alt açık gri üçgen -->
+                    <polygon points="24,35 26,35 25,42" fill="#E8E8E8" stroke="#CCCCCC" stroke-width="0.3"/>
                 </svg>
                 <span class="text-uppercase">Ziya Aytar Yapı İnşaat</span>
             </h1>
