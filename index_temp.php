@@ -1,0 +1,1 @@
+<?php\n$pageTitle = "Ziya Aytar Yapı İnşaat - Antalya İnşaat Firması";\n$pageDescription = "Antalya'da kaliteli inşaat ve yapı hizmetleri. Modern mimari, güvenilir işçilik ve uzman ekibimizle hayalinizdeki projeyi gerçeğe dönüştürüyoruz.";\ninclude "includes/header.php";\n?>\n
