@@ -36,7 +36,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
-        <img class="position-absolute top-50 start-50 translate-middle" src="img/logo_ziya_aytar.png" alt="Logo" style="height: 60px; width: auto; margin-top: -30px; margin-left: -30px;">
+        <img class="position-absolute" src="img/logo_ziya_aytar.png" alt="Logo" style="height: 60px; width: auto; top: 50%; left: 50%; transform: translate(-50%, -50%);">
     </div>
     <!-- Spinner End -->
 
