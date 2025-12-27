@@ -2,9 +2,9 @@
 
 Modern ve responsive mimarlık/inşaat şirketi web sitesi.
 
-## 🚀 GitHub Pages ile Önizleme
+## 🚀 GitHub Pages ile Önizleme (Test Ortamı)
 
-Bu proje GitHub Pages ile otomatik olarak yayınlanabilir.
+Bu proje GitHub Pages ile test/önizleme ortamı olarak kullanılabilir.
 
 ### Kurulum Adımları:
 
@@ -15,6 +15,12 @@ Bu proje GitHub Pages ile otomatik olarak yayınlanabilir.
    ```
    https://dogancmn.github.io/ziyaaytarinsaat/
    ```
+
+### ⚠️ Önemli Notlar:
+
+- **GitHub Pages'te formlar TEST MODUNDA çalışır** - Veriler veritabanına kaydedilmez, sadece görsel test için kullanılır
+- **cPanel'de gerçek veritabanı bağlantısı aktif olur** - Formlar otomatik olarak gerçek API'ye bağlanır
+- GitHub Pages statik hosting olduğu için PHP çalışmaz, bu yüzden test modu kullanılır
 
 ## 📋 Özellikler
 

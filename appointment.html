@@ -278,59 +278,8 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     
-    <!-- Appointment Form Handler -->
-    <script>
-        $(document).ready(function() {
-            // Appointment form submit
-            $('#appointmentForm').on('submit', function(e) {
-                e.preventDefault();
-                
-                const formData = {
-                    name: $('#apptName').val(),
-                    email: $('#apptEmail').val(),
-                    mobile: $('#apptMobile').val(),
-                    service: $('#apptService').val(),
-                    appointment_date: $('#apptDate').val(),
-                    appointment_time: $('#apptTime').val(),
-                    message: $('#apptMessage').val() || ''
-                };
-                
-                // Validasyon
-                if (!formData.name || !formData.email || !formData.mobile || !formData.service || !formData.appointment_date || !formData.appointment_time) {
-                    alert('Lütfen tüm zorunlu alanları doldurun.');
-                    return;
-                }
-                
-                // Submit butonunu devre dışı bırak
-                const submitBtn = $(this).find('button[type="submit"]');
-                const originalText = submitBtn.text();
-                submitBtn.prop('disabled', true).text('Gönderiliyor...');
-                
-                // PHP API'ye gönder
-                $.ajax({
-                    url: 'api/appointment.php',
-                    type: 'POST',
-                    data: formData,
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.success) {
-                            alert(response.message);
-                            $('#appointmentForm')[0].reset();
-                        } else {
-                            alert(response.message || 'Bir hata oluştu. Lütfen tekrar deneyin.');
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('Error:', error);
-                        alert('Bir hata oluştu. Lütfen tekrar deneyin.');
-                    },
-                    complete: function() {
-                        submitBtn.prop('disabled', false).text(originalText);
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- Form Handler (GitHub Pages test mode + cPanel production) -->
+    <script src="js/form-handler.js"></script>
 </body>
 
 </html>
