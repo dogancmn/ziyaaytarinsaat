@@ -61,7 +61,7 @@ include "includes/header.php";
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
-                            <img src="img/icons/icon-2.png" alt="Icon">
+                            <i class="fas fa-drafting-compass text-primary" style="font-size: 4rem;"></i>
                         </div>
                         <h3 class="mb-3">Tasarım Yaklaşımı</h3>
                         <p class="mb-0">Modern ve fonksiyonel tasarımlarla hayalinizdeki yapıyı gerçeğe dönüştürüyoruz. Her projede özgün çözümler sunuyoruz.</p>
@@ -70,7 +70,7 @@ include "includes/header.php";
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
-                            <img src="img/icons/icon-3.png" alt="Icon">
+                            <i class="fas fa-lightbulb text-primary" style="font-size: 4rem;"></i>
                         </div>
                         <h3 class="mb-3">Yenilikçi Çözümler</h3>
                         <p class="mb-0">Sektördeki son teknolojileri kullanarak en kaliteli ve dayanıklı yapıları inşa ediyoruz.</p>
@@ -79,7 +79,7 @@ include "includes/header.php";
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="fact-item text-center bg-light h-100 p-5 pt-0">
                         <div class="fact-icon">
-                            <img src="img/icons/icon-4.png" alt="Icon">
+                            <i class="fas fa-tasks text-primary" style="font-size: 4rem;"></i>
                         </div>
                         <h3 class="mb-3">Proje Yönetimi</h3>
                         <p class="mb-0">Profesyonel proje yönetimi ekibimizle zamanında ve bütçe dahilinde teslimat garantisi veriyoruz.</p>
@@ -136,7 +136,7 @@ include "includes/header.php";
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-1.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-5.png" alt="Icon">
+                            <i class="fas fa-drafting-compass text-primary mb-4" style="font-size: 4rem;"></i>
                             <h3 class="mb-3">Mimari Tasarım</h3>
                             <p class="mb-4">Modern ve fonksiyonel mimari tasarımlarla hayalinizdeki yapıyı planlıyoruz.</p>
                             <a class="btn" href="service.php"><i class="fa fa-plus text-primary me-3"></i>Detaylar</a>
@@ -147,7 +147,7 @@ include "includes/header.php";
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-2.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-6.png" alt="Icon">
+                            <i class="fas fa-cube text-primary mb-4" style="font-size: 4rem;"></i>
                             <h3 class="mb-3">3D Görselleştirme</h3>
                             <p class="mb-4">Projelerinizi 3D olarak görselleştirerek hayalinizdeki sonucu önceden görebilirsiniz.</p>
                             <a class="btn" href="service.php"><i class="fa fa-plus text-primary me-3"></i>Detaylar</a>
@@ -158,7 +158,7 @@ include "includes/header.php";
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-3.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-7.png" alt="Icon">
+                            <i class="fas fa-home text-primary mb-4" style="font-size: 4rem;"></i>
                             <h3 class="mb-3">Konut Planlama</h3>
                             <p class="mb-4">Villa, daire ve konut projeleriniz için detaylı planlama ve tasarım hizmeti.</p>
                             <a class="btn" href="service.php"><i class="fa fa-plus text-primary me-3"></i>Detaylar</a>
@@ -169,7 +169,7 @@ include "includes/header.php";
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-4.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-8.png" alt="Icon">
+                            <i class="fas fa-couch text-primary mb-4" style="font-size: 4rem;"></i>
                             <h3 class="mb-3">İç Mimari</h3>
                             <p class="mb-4">Modern ve şık iç mekan tasarımlarıyla yaşam alanlarınızı güzelleştiriyoruz.</p>
                             <a class="btn" href="service.php"><i class="fa fa-plus text-primary me-3"></i>Detaylar</a>
@@ -180,7 +180,7 @@ include "includes/header.php";
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-5.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-9.png" alt="Icon">
+                            <i class="fas fa-tools text-primary mb-4" style="font-size: 4rem;"></i>
                             <h3 class="mb-3">Tadilat</h3>
                             <p class="mb-4">Eski yapılarınızı modern standartlara uygun şekilde yeniliyoruz.</p>
                             <a class="btn" href="service.php"><i class="fa fa-plus text-primary me-3"></i>Detaylar</a>
@@ -191,7 +191,7 @@ include "includes/header.php";
                     <div class="service-item d-flex position-relative text-center h-100">
                         <img class="bg-img" src="img/service-6.jpg" alt="">
                         <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-10.png" alt="Icon">
+                            <i class="fas fa-hard-hat text-primary mb-4" style="font-size: 4rem;"></i>
                             <h3 class="mb-3">İnşaat</h3>
                             <p class="mb-4">Kaliteli malzeme ve uzman ekibimizle güvenilir inşaat hizmetleri sunuyoruz.</p>
                             <a class="btn" href="service.php"><i class="fa fa-plus text-primary me-3"></i>Detaylar</a>
@@ -215,7 +215,7 @@ include "includes/header.php";
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-2.png" alt="Icon">
+                                <i class="fas fa-drafting-compass text-primary flex-shrink-0" style="font-size: 3rem; width: 60px;"></i>
                                 <div class="ms-4">
                                     <h3>Tasarım Yaklaşımı</h3>
                                     <p class="mb-0">Modern ve fonksiyonel tasarımlarla her projede özgün çözümler sunuyoruz.</p>
@@ -224,7 +224,7 @@ include "includes/header.php";
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-3.png" alt="Icon">
+                                <i class="fas fa-lightbulb text-primary flex-shrink-0" style="font-size: 3rem; width: 60px;"></i>
                                 <div class="ms-4">
                                     <h3>Yenilikçi Çözümler</h3>
                                     <p class="mb-0">Sektördeki son teknolojileri kullanarak en kaliteli ve dayanıklı yapıları inşa ediyoruz.</p>
@@ -233,7 +233,7 @@ include "includes/header.php";
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-4.png" alt="Icon">
+                                <i class="fas fa-tasks text-primary flex-shrink-0" style="font-size: 3rem; width: 60px;"></i>
                                 <div class="ms-4">
                                     <h3>Proje Yönetimi</h3>
                                     <p class="mb-0">Profesyonel proje yönetimi ekibimizle zamanında ve bütçe dahilinde teslimat garantisi veriyoruz.</p>

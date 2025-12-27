@@ -305,9 +305,10 @@ h6,
     background: var(--dark);
 }
 
-.fact-item .fact-icon i {
+.fact-item .fact-icon i,
+.fact-item .fact-icon img {
     color: var(--primary);
-    transition: .5;
+    transition: .5s;
 }
 
 .fact-item:hover .fact-icon i {
