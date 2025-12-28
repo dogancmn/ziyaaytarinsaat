@@ -1,0 +1,14 @@
+{
+  "name": "ziyaaytarinsaat/website",
+  "description": "Ziya Aytar Yapı İnşaat Website",
+  "type": "project",
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
+

@@ -1,0 +1,33 @@
+# Admin Panel .htaccess
+# This file ensures admin panel works correctly on Apache servers
+
+# Enable rewrite engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Allow direct access to files
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ - [L]
+    
+    # Route PHP files
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
+    
+    # Default to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^$ index.php [L]
+</IfModule>
+
+# Security: Deny access to includes folder
+<IfModule mod_rewrite.c>
+    RewriteRule ^includes/ - [F,L]
+</IfModule>
+
+# Set proper MIME types
+<IfModule mod_mime.c>
+    AddType text/css .css
+    AddType application/javascript .js
+</IfModule>
+

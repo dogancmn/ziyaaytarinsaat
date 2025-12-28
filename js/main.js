@@ -82,3 +82,44 @@
     
 })(jQuery);
 
+
+// Modern City Selector - Clean & Beautiful Design
+$(document).ready(function() {
+    const cityItems = $('.city-item');
+    
+    // Initialize first city as active
+    const firstCity = cityItems.first();
+    if (firstCity.length) {
+        const firstTarget = firstCity.data('target');
+        if (firstTarget) {
+            $('[data-bs-target="' + firstTarget + '"]').tab('show');
+        }
+    }
+    
+    // City item click handler
+    cityItems.on('click', function() {
+        const clickedItem = $(this);
+        const targetCity = clickedItem.data('target');
+        
+        // Remove active class from all items
+        cityItems.removeClass('active');
+        
+        // Add active class to clicked item
+        clickedItem.addClass('active');
+        
+        // Switch to corresponding tab
+        if (targetCity) {
+            $('[data-bs-target="' + targetCity + '"]').tab('show');
+        }
+        
+        // Smooth scroll to projects when city is selected
+        setTimeout(function() {
+            const projectsSection = $('#cityTabsContent');
+            if (projectsSection.length) {
+                $('html, body').animate({
+                    scrollTop: projectsSection.offset().top - 100
+                }, 800);
+            }
+        }, 300);
+    });
+});

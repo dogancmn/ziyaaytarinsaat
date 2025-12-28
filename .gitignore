@@ -1,10 +1,9 @@
-# OS Files
+# Environment files
+config.php
+.env
+
+# OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
 # Editor files
@@ -16,12 +15,8 @@ Thumbs.db
 
 # Logs
 *.log
-npm-debug.log*
+logs/
 
 # Temporary files
-*.tmp
-*.temp
-
-# Config files with sensitive data
-config.php
-
+tmp/
+temp/

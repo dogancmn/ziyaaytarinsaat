@@ -46,20 +46,20 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+905326701947"><i class="fa fa-phone-alt text-primary me-2"></i>+90 532 670 19 47</a>
-                    <a class="text-body px-2" href=""><i class="fa fa-map-marker-alt text-primary me-2"></i>Memurevleri, 07050 Muratpaşa/Antalya</a>
+                    <a class="text-white px-2" href="tel:+905326701947"><i class="fa fa-phone-alt text-white me-2"></i>+90 532 670 19 47</a>
+                    <a class="text-white px-2" href=""><i class="fa fa-map-marker-alt text-white me-2"></i>Memurevleri, 07050 Muratpaşa/Antalya</a>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-2">
-                    <a class="text-body px-2" href="">Şartlar</a>
-                    <a class="text-body px-2" href="">Gizlilik</a>
+                    <a class="text-white px-2" href="">Şartlar</a>
+                    <a class="text-white px-2" href="">Gizlilik</a>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square btn-outline-light me-1" href=""><i class="fab fa-facebook-f text-white"></i></a>
+                    <a class="btn btn-sm-square btn-outline-light me-1" href=""><i class="fab fa-twitter text-white"></i></a>
+                    <a class="btn btn-sm-square btn-outline-light me-1" href=""><i class="fab fa-linkedin-in text-white"></i></a>
+                    <a class="btn btn-sm-square btn-outline-light me-0" href=""><i class="fab fa-instagram text-white"></i></a>
                 </div>
             </div>
         </div>

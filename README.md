@@ -1,71 +1,100 @@
 # Ziya Aytar Yapı İnşaat - Website
 
-Modern ve responsive mimarlık/inşaat şirketi web sitesi.
+Antalya'da kaliteli inşaat ve yapı hizmetleri sunan firmanın resmi web sitesi.
 
-## 🚀 GitHub Pages ile Önizleme (Test Ortamı)
+## 🚀 Özellikler
 
-Bu proje GitHub Pages ile test/önizleme ortamı olarak kullanılabilir.
+- Modern ve responsive tasarım
+- PHP + MySQL backend
+- İletişim formu
+- Randevu sistemi
+- Türkçe dil desteği
 
-### Kurulum Adımları:
+## 📋 Gereksinimler
 
-1. GitHub repository'nizde **Settings** → **Pages** bölümüne gidin
-2. **Source** kısmından **main** branch'ini seçin
-3. **Save** butonuna tıklayın
-4. Birkaç dakika içinde siteniz şu adreste yayınlanacak:
-   ```
-   https://dogancmn.github.io/ziyaaytarinsaat/
-   ```
+- PHP 7.4 veya üzeri
+- MySQL 5.7 veya üzeri
+- Apache/Nginx web sunucusu
 
-### ⚠️ Önemli Notlar:
+## 🛠️ Kurulum
 
-- **GitHub Pages'te formlar TEST MODUNDA çalışır** - Veriler veritabanına kaydedilmez, sadece görsel test için kullanılır
-- **cPanel'de gerçek veritabanı bağlantısı aktif olur** - Formlar otomatik olarak gerçek API'ye bağlanır
-- GitHub Pages statik hosting olduğu için PHP çalışmaz, bu yüzden test modu kullanılır
+### Yerel Geliştirme
 
-## 📋 Özellikler
+1. Repository'yi klonlayın:
+```bash
+git clone https://github.com/dogancmn/ziyaaytarinsaat.git
+cd ziyaaytarinsaat
+```
 
-- ✅ Responsive tasarım (mobil uyumlu)
-- ✅ Modern ve profesyonel arayüz
-- ✅ İletişim formu
-- ✅ Randevu alma sistemi
-- ✅ Proje galerisi
-- ✅ Hizmetler sayfası
-- ✅ Ekip tanıtımı
+2. `config.php` dosyasını oluşturun:
+```bash
+cp config.example.php config.php
+```
 
-## 🛠️ Teknolojiler
+3. `config.php` dosyasını düzenleyip veritabanı bilgilerinizi girin.
 
-- HTML5
-- CSS3 / Bootstrap
-- JavaScript / jQuery
-- Owl Carousel
-- WOW.js (animasyonlar)
-- Tempus Dominus (tarih/saat seçici)
+4. Veritabanını oluşturun:
+```bash
+mysql -u root -p < database.sql
+```
+
+5. PHP built-in server ile çalıştırın:
+```bash
+php -S localhost:8000
+```
+
+### Production Deployment
+
+Detaylı deployment talimatları için `DEPLOYMENT.md` dosyasına bakın.
+
+**Önerilen Platformlar:**
+- 🚂 [Railway](https://railway.app) - Ücretsiz tier, PHP + MySQL
+- 🎨 [Render](https://render.com) - Ücretsiz tier
+- 🌐 [000webhost](https://www.000webhost.com) - Tamamen ücretsiz
+
+## 📁 Proje Yapısı
+
+```
+├── api/                 # API endpoints
+│   ├── contact.php      # İletişim formu API
+│   └── appointment.php  # Randevu formu API
+├── includes/            # PHP include dosyaları
+│   ├── header.php       # Header
+│   └── footer.php      # Footer
+├── css/                 # Stylesheet dosyaları
+├── js/                  # JavaScript dosyaları
+│   ├── main.js          # Ana JavaScript
+│   └── form-handler.js  # Form handler
+├── img/                 # Görseller
+├── lib/                 # Kütüphaneler
+├── config.php           # Veritabanı yapılandırması (gitignore'da)
+├── database.sql         # Veritabanı şeması
+└── *.php                # Sayfa dosyaları
+```
+
+## 🔧 Yapılandırma
+
+### Environment Variables (Railway/Render)
+
+- `DB_HOST` - Veritabanı host adresi
+- `DB_NAME` - Veritabanı adı
+- `DB_USER` - Veritabanı kullanıcı adı
+- `DB_PASSWORD` - Veritabanı şifresi
 
 ## 📝 Notlar
 
-- Proje PHP + MySQL ile çalışmaktadır
-- cPanel kurulumu için `CPANEL_KURULUM.md` dosyasına bakın
-- Veritabanı şeması `database.sql` dosyasında bulunur
+- GitHub Pages PHP desteklemez, bu yüzden Railway/Render gibi platformlar kullanılmalıdır
+- `config.php` dosyası `.gitignore`'da olduğu için GitHub'a yüklenmez
+- Production'da environment variables kullanın
 
-## 🔧 Geliştirme
+## 📄 Lisans
 
-Projeyi local'de çalıştırmak için:
+Bu proje özel bir projedir.
 
-```bash
-# Repository'yi klonlayın
-git clone https://github.com/dogancmn/ziyaaytarinsaat.git
+## 👤 İletişim
 
-# Proje klasörüne gidin
-cd ziyaaytarinsaat
-
-# Basit bir HTTP server ile çalıştırın (Python örneği)
-python -m http.server 8000
-
-# Tarayıcıda açın
-# http://localhost:8000
-```
-
-## 📧 İletişim
-
-Proje hakkında sorularınız için issue açabilirsiniz.
+Ziya Aytar Yapı İnşaat
+- 📍 Memurevleri, 07050 Muratpaşa/Antalya
+- 📞 +90 532 670 19 47
+- 📧 info@ziyaaytarinsaat.com
 

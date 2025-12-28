@@ -1,66 +1,50 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
+require_once dirname(__DIR__) . '/config.php';
 
-require_once '../config.php';
+// Check if database connection exists
+if (!isset($conn) || $conn === null) {
+    http_response_code(503);
+    echo json_encode(['success' => false, 'message' => 'Veritabanı bağlantısı yok. Lütfen config.php dosyasını kontrol edin.']);
+    exit;
+}
 
-// Sadece POST isteklerini kabul et
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo json_encode(['success' => false, 'message' => 'Sadece POST istekleri kabul edilir']);
+    echo json_encode(['success' => false, 'message' => 'Sadece POST istekleri kabul edilir.']);
     exit;
 }
 
-// Form verilerini al
-$name = isset($_POST['name']) ? trim($_POST['name']) : '';
-$email = isset($_POST['email']) ? trim($_POST['email']) : '';
-$subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
-$message = isset($_POST['message']) ? trim($_POST['message']) : '';
+$name = trim($_POST['name'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$subject = trim($_POST['subject'] ?? '');
+$message = trim($_POST['message'] ?? '');
 
-// Validasyon
-$errors = [];
-
-if (empty($name)) {
-    $errors[] = 'Ad alanı zorunludur';
-}
-
-if (empty($email)) {
-    $errors[] = 'E-posta alanı zorunludur';
-} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Geçerli bir e-posta adresi giriniz';
-}
-
-if (empty($message)) {
-    $errors[] = 'Mesaj alanı zorunludur';
-}
-
-// Hata varsa döndür
-if (!empty($errors)) {
+// Validation
+if (empty($name) || empty($email) || empty($message)) {
     http_response_code(400);
-    echo json_encode(['success' => false, 'message' => implode(', ', $errors)]);
+    echo json_encode(['success' => false, 'message' => 'Lütfen tüm gerekli alanları doldurun.']);
     exit;
 }
 
-// SQL injection koruması için prepared statement kullan
-$stmt = $conn->prepare("INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("ssss", $name, $email, $subject, $message);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Geçerli bir e-posta adresi girin.']);
+    exit;
+}
 
-if ($stmt->execute()) {
+try {
+    $stmt = $conn->prepare("INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)");
+    $stmt->execute([$name, $email, $subject, $message]);
+    
     echo json_encode([
         'success' => true,
-        'message' => 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.'
+        'message' => 'Mesajınız başarıyla gönderildi. En kısa sürede size geri dönüş yapacağız.'
     ]);
-} else {
+} catch(PDOException $e) {
+    error_log("Contact form error: " . $e->getMessage());
     http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'message' => 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.'
-    ]);
+    echo json_encode(['success' => false, 'message' => 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.']);
 }
-
-$stmt->close();
-$conn->close();
 ?>
 
